@@ -31,14 +31,14 @@ const instantBook = ref(false)
             <span class="flex h-2 w-2 rounded-full bg-amber-500"></span>
             Verified Local Experts Worldwide
           </div>
-          <h1 class="text-3xl sm:text-4xl font-black text-zinc-900 tracking-tight">
+          <h1 class="font-heading text-3xl sm:text-4xl font-black text-zinc-900 tracking-tight">
             Explore Experiences by <span class="text-emerald-600 underline decoration-amber-400 decoration-wavy decoration-2">Local Guides</span>
           </h1>
-          <p class="text-zinc-600 mt-1.5 text-sm sm:text-base font-medium">Discover private tours, authentic food walks, and hidden city spots tailored around your itinerary.</p>
+          <p class="font-sans text-zinc-600 mt-1.5 text-sm sm:text-base font-medium">Discover private tours, authentic food walks, and hidden city spots tailored around your itinerary.</p>
         </div>
 
         <!-- Quick Metrics Summary -->
-        <div class="flex items-center gap-4 text-xs font-semibold text-zinc-600 bg-white px-4 py-3 rounded-2xl border border-zinc-200/80 shadow-sm shrink-0">
+        <div class="flex items-center gap-4 text-xs font-semibold text-zinc-600 bg-white px-4 py-3 rounded-2xl border border-zinc-200/80 shadow-sm shrink-0 font-sans">
           <div class="flex items-center gap-2">
             <span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
             <span>240+ Guides Active Now</span>
@@ -72,13 +72,13 @@ const instantBook = ref(false)
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 12h7.5" />
                   </svg>
                 </div>
-                <h3 class="font-bold text-zinc-900 text-base">Filter Guides</h3>
+                <h3 class="font-heading font-bold text-zinc-900 text-base">Filter Guides</h3>
               </div>
-              <button @click="selectedContinent = ''; searchDestination = ''; selectedCategory = ''; maxPrice = 200;" class="text-xs text-emerald-600 hover:text-emerald-800 font-bold transition-colors">Reset All</button>
+              <button @click="selectedContinent = ''; searchDestination = ''; selectedCategory = ''; maxPrice = 200;" class="text-xs text-emerald-600 hover:text-emerald-800 font-bold transition-colors font-sans">Reset All</button>
             </div>
 
             <!-- Form Fields -->
-            <form @submit.prevent class="space-y-5">
+            <form @submit.prevent class="space-y-5 font-sans">
               
               <!-- 1. Continent Selector -->
               <div>
@@ -187,7 +187,7 @@ const instantBook = ref(false)
         <!-- PART 2 & 3: EXPERIENCES GRID (2 / 3 Columns on Desktop)      -->
         <!-- Displaying 12 Verified Local Experiences                      -->
         <!-- ============================================================= -->
-        <main class="lg:col-span-2 space-y-8">
+        <main class="lg:col-span-2 space-y-8 font-sans">
           
           <!-- Sorting & Results Controls -->
           <div class="flex items-center justify-between bg-white px-5 py-3.5 rounded-2xl border border-zinc-200/80 shadow-sm text-sm">
@@ -211,9 +211,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-amber-500 text-white font-black text-xs flex items-center justify-center">TN</div>
+                    <div class="w-10 h-10 rounded-xl bg-amber-500 text-white font-heading font-black text-xs flex items-center justify-center">TN</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Thabo Ndlovu</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Thabo Ndlovu</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -222,7 +222,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Cape Town, SA</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Bo-Kaap Culinary & Secret Sunset Ridge Walk</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Bo-Kaap Culinary & Secret Sunset Ridge Walk</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Taste traditional Cape Malay dishes, explore vibrant colorful streets, and view Table Mountain at twilight.</p>
               </div>
               <div>
@@ -242,9 +242,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-700 text-white font-black text-xs flex items-center justify-center">KS</div>
+                    <div class="w-10 h-10 rounded-xl bg-emerald-700 text-white font-heading font-black text-xs flex items-center justify-center">KS</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Kenji Sato</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Kenji Sato</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -253,7 +253,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Kyoto, Japan</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Hidden Bamboo Groves & Private Tea Ceremony</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Hidden Bamboo Groves & Private Tea Ceremony</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Bypass crowds to visit a 300-year-old family tea master and secret Arashiyama sanctuaries.</p>
               </div>
               <div>
@@ -273,9 +273,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-rose-600 text-white font-black text-xs flex items-center justify-center">GR</div>
+                    <div class="w-10 h-10 rounded-xl bg-rose-600 text-white font-heading font-black text-xs flex items-center justify-center">GR</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Giulia Rossi</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Giulia Rossi</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -284,7 +284,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Rome, Italy</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Trastevere Street Food & Ancient Wine Cellars</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Trastevere Street Food & Ancient Wine Cellars</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Indulge in artisanal gelato, hand-rolled pasta, and historic underground cellars away from tourist traps.</p>
               </div>
               <div>
@@ -304,9 +304,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-amber-600 text-white font-black text-xs flex items-center justify-center">TS</div>
+                    <div class="w-10 h-10 rounded-xl bg-amber-600 text-white font-heading font-black text-xs flex items-center justify-center">TS</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Tiago Silva</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Tiago Silva</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -315,7 +315,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Lisbon, Portugal</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Alfama Fado Alleyways & Scenic Viewpoint Photography</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Alfama Fado Alleyways & Scenic Viewpoint Photography</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Walk through medieval neighborhoods, capture breathtaking views, and enjoy authentic pastel de nata.</p>
               </div>
               <div>
@@ -335,9 +335,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-teal-600 text-white font-black text-xs flex items-center justify-center">WS</div>
+                    <div class="w-10 h-10 rounded-xl bg-teal-600 text-white font-heading font-black text-xs flex items-center justify-center">WS</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Wayan Sudira</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Wayan Sudira</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -346,7 +346,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Bali, Indonesia</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Ubud Hidden Waterfalls & Organic Jungle Cooking</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Ubud Hidden Waterfalls & Organic Jungle Cooking</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Swim in untouched jungle cascades and prepare traditional Balinese meals with fresh farm ingredients.</p>
               </div>
               <div>
@@ -366,9 +366,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-violet-600 text-white font-black text-xs flex items-center justify-center">LN</div>
+                    <div class="w-10 h-10 rounded-xl bg-violet-600 text-white font-heading font-black text-xs flex items-center justify-center">LN</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Linh Nguyen</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Linh Nguyen</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -377,7 +377,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Hanoi, Vietnam</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Old Quarter Midnight Market & Egg Coffee Workshop</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Old Quarter Midnight Market & Egg Coffee Workshop</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Navigate labyrinth alleyways, sip authentic egg coffee, and sample legendary street stalls.</p>
               </div>
               <div>
@@ -397,9 +397,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-orange-600 text-white font-black text-xs flex items-center justify-center">MH</div>
+                    <div class="w-10 h-10 rounded-xl bg-orange-600 text-white font-heading font-black text-xs flex items-center justify-center">MH</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Mateo Hernandez</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Mateo Hernandez</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -408,7 +408,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Mexico City, MX</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Coyoacán Artisan Markets & Mezcal Tasting</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Coyoacán Artisan Markets & Mezcal Tasting</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Uncover bohemian art history, visit traditional markets, and learn craft mezcal distillation.</p>
               </div>
               <div>
@@ -428,9 +428,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-blue-700 text-white font-black text-xs flex items-center justify-center">CL</div>
+                    <div class="w-10 h-10 rounded-xl bg-blue-700 text-white font-heading font-black text-xs flex items-center justify-center">CL</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Camille Laurent</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Camille Laurent</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -439,7 +439,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Paris, France</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Montmartre Artists & Secret Bakery Crawl</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Montmartre Artists & Secret Bakery Crawl</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Explore hidden bohemian studios and savor award-winning croissants with a local art historian.</p>
               </div>
               <div>
@@ -459,9 +459,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-black text-xs flex items-center justify-center">SM</div>
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-heading font-black text-xs flex items-center justify-center">SM</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Sofia Morales</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Sofia Morales</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -470,7 +470,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Buenos Aires, AR</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">San Telmo Underground Tango & Malbec Tasting</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">San Telmo Underground Tango & Malbec Tasting</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Experience secret neighbourhood tango halls (milongas) and classic Argentinian steaks.</p>
               </div>
               <div>
@@ -490,9 +490,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-amber-700 text-white font-black text-xs flex items-center justify-center">TM</div>
+                    <div class="w-10 h-10 rounded-xl bg-amber-700 text-white font-heading font-black text-xs flex items-center justify-center">TM</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Tariq Mansour</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Tariq Mansour</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -501,7 +501,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Cairo, Egypt</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Islamic Cairo Bazaar & Rooftop Citadel Sunset</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Islamic Cairo Bazaar & Rooftop Citadel Sunset</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Walk Khan el-Khalili spice markets with an Egyptologist and enjoy tea overlooking the skyline.</p>
               </div>
               <div>
@@ -521,9 +521,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-cyan-700 text-white font-black text-xs flex items-center justify-center">CB</div>
+                    <div class="w-10 h-10 rounded-xl bg-cyan-700 text-white font-heading font-black text-xs flex items-center justify-center">CB</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Chloe Bennett</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Chloe Bennett</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -532,7 +532,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">Sydney, Australia</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Northern Beaches Secret Coastal Hike & Native Wildlife</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Northern Beaches Secret Coastal Hike & Native Wildlife</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Discover hidden tidal pools, secluded surf beaches, and native bushland walks.</p>
               </div>
               <div>
@@ -552,9 +552,9 @@ const instantBook = ref(false)
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-purple-700 text-white font-black text-xs flex items-center justify-center">MK</div>
+                    <div class="w-10 h-10 rounded-xl bg-purple-700 text-white font-heading font-black text-xs flex items-center justify-center">MK</div>
                     <div>
-                      <h4 class="text-xs font-bold text-zinc-900">Marcus King</h4>
+                      <h4 class="font-heading text-xs font-bold text-zinc-900">Marcus King</h4>
                       <div class="flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
                         Verified Local
@@ -563,7 +563,7 @@ const instantBook = ref(false)
                   </div>
                   <span class="px-2.5 py-1 text-[11px] font-bold bg-stone-100 text-zinc-700 rounded-lg">New York, USA</span>
                 </div>
-                <h3 class="text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Brooklyn Street Art & Underground Jazz Speakeasies</h3>
+                <h3 class="font-heading text-lg font-extrabold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">Brooklyn Street Art & Underground Jazz Speakeasies</h3>
                 <p class="text-xs text-zinc-500 font-medium line-clamp-2 mb-4">Tour Bushwick mural alleys followed by password-only live jazz clubs in Greenwich Village.</p>
               </div>
               <div>
@@ -584,7 +584,7 @@ const instantBook = ref(false)
           <!-- PAGINATION CONTROLS SECTION                                   -->
           <!-- Accessible, Leeto-styled pagination controls                 -->
           <!-- ============================================================= -->
-          <div class="flex items-center justify-between border-t border-zinc-200/80 pt-6 mt-8">
+          <div class="flex items-center justify-between border-t border-zinc-200/80 pt-6 mt-8 font-sans">
             
             <!-- Mobile / Standard Prev Button -->
             <button class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-zinc-700 bg-white border border-zinc-200/80 rounded-xl hover:bg-stone-100 transition duration-150 shadow-sm disabled:opacity-50" disabled>

@@ -18,11 +18,12 @@ const isMobileMenuOpen = ref(false)
               <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 13.5l3-4.5-1.5 6 4.5-3-6 1.5z" />
             </svg>
           </div>
-          <span class="text-2xl font-black text-zinc-900 tracking-tight">Leeto</span>
+          <!-- Applied font-heading (Plus Jakarta Sans) to Brand Title -->
+          <span class="text-2xl font-heading font-black text-zinc-900 tracking-tight">Leeto</span>
         </NuxtLink>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+        <!-- Desktop Navigation Links (Inherits font-sans / Inter) -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-sans font-semibold">
           <NuxtLink 
             to="/guides" 
             class="text-zinc-700 hover:text-emerald-600 transition-colors flex items-center gap-1.5"
@@ -40,7 +41,7 @@ const isMobileMenuOpen = ref(false)
             class="text-zinc-700 hover:text-emerald-600 transition-colors flex items-center gap-1.5"
           >
             Become a Guide
-            <span class="px-2 py-0.5 text-[10px] bg-amber-100 text-amber-800 rounded-full font-bold uppercase tracking-wider">Earn</span>
+            <span class="px-2 py-0.5 text-[10px] bg-amber-100 text-amber-800 rounded-full font-heading font-bold uppercase tracking-wider">Earn</span>
           </NuxtLink>
           <NuxtLink 
             to="/how-it-works" 
@@ -50,8 +51,8 @@ const isMobileMenuOpen = ref(false)
           </NuxtLink>
         </nav>
 
-        <!-- Action Buttons -->
-        <div class="hidden md:flex items-center gap-3">
+        <!-- Action Buttons (Using font-sans for clean UI reading) -->
+        <div class="hidden md:flex items-center gap-3 font-sans">
           <NuxtLink 
             to="/auth/login" 
             class="text-sm font-semibold text-zinc-700 hover:text-emerald-600 px-4 py-2.5 transition-colors"
@@ -92,7 +93,7 @@ const isMobileMenuOpen = ref(false)
     <!-- Mobile Dropdown Navigation -->
     <div 
       v-show="isMobileMenuOpen" 
-      class="md:hidden border-t border-zinc-200/80 bg-stone-50 px-4 pt-3 pb-6 space-y-3 shadow-lg"
+      class="md:hidden border-t border-zinc-200/80 bg-stone-50 px-4 pt-3 pb-6 space-y-3 shadow-lg font-sans"
     >
       <NuxtLink 
         to="/guides" 
@@ -119,7 +120,7 @@ const isMobileMenuOpen = ref(false)
         How It Works
       </NuxtLink>
 
-      <div class="pt-4 border-t border-zinc-200/80 flex flex-col gap-2">
+      <div class="pt-4 border-t border-zinc-200/80 flex flex-col gap-2 font-sans">
         <NuxtLink 
           to="/auth/login" 
           class="w-full text-center px-4 py-2.5 rounded-xl text-sm font-semibold text-zinc-800 bg-zinc-200/60 hover:bg-zinc-200"

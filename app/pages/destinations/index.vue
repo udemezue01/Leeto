@@ -137,34 +137,31 @@ const filteredDestinations = computed(() => {
 <template>
   <section class="relative bg-stone-50 py-12 lg:py-20 overflow-hidden font-sans border-b border-zinc-200/60 min-h-screen">
     
-    <!-- Ambient Background Glows -->
     <div class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
 
-      <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto space-y-6">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/70 text-amber-900 text-xs font-bold uppercase tracking-wider">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/70 text-amber-900 text-xs font-bold uppercase tracking-wider font-sans">
           <span class="flex h-2 w-2 rounded-full bg-amber-500"></span>
           Global Destination Hub
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
           Explore cities across <span class="text-emerald-600 underline decoration-amber-400 decoration-wavy decoration-2">every continent.</span>
         </h1>
 
-        <p class="text-base sm:text-lg text-zinc-600 font-medium leading-relaxed">
+        <p class="font-sans text-base sm:text-lg text-zinc-600 font-medium leading-relaxed">
           From ancient alleyways in Kyoto to coastal trails in Cape Town, discover authentic private tours hosted by verified local experts worldwide.
         </p>
 
-        <!-- Search input box -->
         <div class="max-w-md mx-auto relative">
           <input 
             v-model="searchQuery"
             type="text" 
             placeholder="Search city or country (e.g. Japan, Rome)..." 
-            class="w-full pl-11 pr-4 py-3 bg-white text-zinc-900 placeholder-zinc-400 text-sm font-semibold rounded-2xl shadow-md border border-zinc-200/80 focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all"
+            class="font-sans w-full pl-11 pr-4 py-3 bg-white text-zinc-900 placeholder-zinc-400 text-sm font-semibold rounded-2xl shadow-md border border-zinc-200/80 focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all"
           />
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-600 absolute left-3.5 top-3.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -173,14 +170,13 @@ const filteredDestinations = computed(() => {
         </div>
       </div>
 
-      <!-- Continent Navigation Tabs -->
       <div class="flex items-center justify-center flex-wrap gap-2 pt-2">
         <button
           v-for="continent in continents"
           :key="continent.id"
           @click="activeContinent = continent.id"
           :class="[
-            'px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all duration-200',
+            'px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all duration-200 font-sans',
             activeContinent === continent.id
               ? 'bg-zinc-900 text-white shadow-md'
               : 'bg-white text-zinc-600 border border-zinc-200/80 hover:border-emerald-600 hover:text-emerald-600'
@@ -190,7 +186,6 @@ const filteredDestinations = computed(() => {
         </button>
       </div>
 
-      <!-- Destinations Card Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div
           v-for="dest in filteredDestinations"
@@ -198,7 +193,6 @@ const filteredDestinations = computed(() => {
           class="bg-white rounded-3xl border border-zinc-200/80 shadow-lg shadow-zinc-200/50 overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300"
         >
           <div>
-            <!-- Image Header -->
             <div class="relative h-60 w-full overflow-hidden bg-zinc-900">
               <img 
                 :src="dest.image" 
@@ -207,8 +201,7 @@ const filteredDestinations = computed(() => {
               />
               <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent"></div>
               
-              <!-- Badges Overlay -->
-              <div class="absolute top-4 left-4 flex items-center gap-2">
+              <div class="absolute top-4 left-4 flex items-center gap-2 font-sans">
                 <span class="bg-zinc-900/80 backdrop-blur-md px-3 py-1 rounded-full text-amber-400 text-[11px] font-bold uppercase tracking-wider border border-white/10">
                   {{ dest.continent }}
                 </span>
@@ -217,35 +210,36 @@ const filteredDestinations = computed(() => {
                 </span>
               </div>
 
-              <!-- City & Country Overlay -->
               <div class="absolute bottom-4 left-4 right-4 text-white">
-                <h3 class="text-2xl font-black leading-tight">{{ dest.city }}</h3>
-                <p class="text-xs font-semibold text-stone-200">{{ dest.country }}</p>
+                <h3 class="font-heading text-2xl font-black leading-tight">{{ dest.city }}</h3>
+                <p class="font-sans text-xs font-semibold text-stone-200">{{ dest.country }}</p>
               </div>
             </div>
 
-            <!-- Card Content Body -->
             <div class="p-6 space-y-4">
-              <div class="flex items-center justify-between text-xs font-bold text-zinc-600 border-b border-zinc-100 pb-3">
+              <div class="flex items-center justify-between text-xs font-bold text-zinc-600 border-b border-zinc-100 pb-3 font-sans">
                 <span class="flex items-center gap-1 text-emerald-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                   </svg>
                   {{ dest.guidesCount }} Active Local Guides
                 </span>
-                <span class="text-amber-500">
-                  ★ {{ dest.rating }} <span class="text-zinc-400 font-normal">({{ dest.reviews }})</span>
+                <span class="flex items-center gap-1 text-amber-500 font-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-amber-400">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                  </svg>
+                  <span>{{ dest.rating }}</span>
+                  <span class="text-zinc-400 font-normal">({{ dest.reviews }})</span>
                 </span>
               </div>
 
-              <!-- Popular Tags -->
               <div>
-                <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Top Experiences:</p>
+                <p class="font-sans text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Top Experiences:</p>
                 <div class="flex flex-wrap gap-1.5">
                   <span 
                     v-for="tag in dest.tags" 
                     :key="tag" 
-                    class="px-2.5 py-1 rounded-lg bg-stone-100 text-zinc-700 text-xs font-semibold"
+                    class="font-sans px-2.5 py-1 rounded-lg bg-stone-100 text-zinc-700 text-xs font-semibold"
                   >
                     {{ tag }}
                   </span>
@@ -254,9 +248,8 @@ const filteredDestinations = computed(() => {
             </div>
           </div>
 
-          <!-- Card Footer Button -->
           <div class="p-6 pt-0">
-            <button class="w-full py-3 bg-zinc-900 group-hover:bg-emerald-600 text-white font-bold text-xs rounded-xl shadow-md transition-all duration-200 flex items-center justify-center gap-2">
+            <button class="font-sans w-full py-3 bg-zinc-900 group-hover:bg-emerald-600 text-white font-bold text-xs rounded-xl shadow-md transition-all duration-200 flex items-center justify-center gap-2">
               <span>Explore {{ dest.city }} Guides</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -266,32 +259,30 @@ const filteredDestinations = computed(() => {
         </div>
       </div>
 
-      <!-- Empty State -->
       <div v-if="filteredDestinations.length === 0" class="text-center py-16 bg-white rounded-3xl border border-zinc-200/80 shadow-sm">
-        <p class="text-lg font-bold text-zinc-800">No destinations match your search.</p>
-        <p class="text-sm text-zinc-500 mt-1">Try resetting your continent filter or typing a different city.</p>
-        <button @click="activeContinent = 'all'; searchQuery = ''" class="mt-4 px-6 py-2.5 bg-zinc-900 text-white font-bold text-xs rounded-xl">
+        <p class="font-heading text-lg font-bold text-zinc-800">No destinations match your search.</p>
+        <p class="font-sans text-sm text-zinc-500 mt-1">Try resetting your continent filter or typing a different city.</p>
+        <button @click="activeContinent = 'all'; searchQuery = ''" class="font-sans mt-4 px-6 py-2.5 bg-zinc-900 text-white font-bold text-xs rounded-xl">
           Reset All Filters
         </button>
       </div>
 
-      <!-- Request Custom City Banner -->
       <div class="bg-zinc-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl border border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-8">
         <div class="absolute top-0 right-0 -mt-10 -mr-10 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
         
         <div class="space-y-3 text-center md:text-left max-w-xl relative z-10">
-          <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/30">
+          <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/30 font-sans">
             Don't see your next stop?
           </span>
-          <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          <h2 class="font-heading text-2xl sm:text-3xl font-black text-white tracking-tight">
             Request a verified guide in any city worldwide.
           </h2>
-          <p class="text-stone-300 font-medium text-xs sm:text-sm leading-relaxed">
+          <p class="font-sans text-stone-300 font-medium text-xs sm:text-sm leading-relaxed">
             We onboard vetted local experts in 50+ new destinations every month. Tell us where you are traveling next!
           </p>
         </div>
 
-        <button class="w-full sm:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl shadow-lg transition-all duration-200 shrink-0 relative z-10">
+        <button class="font-sans w-full sm:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl shadow-lg transition-all duration-200 shrink-0 relative z-10">
           Request a Destination
         </button>
       </div>

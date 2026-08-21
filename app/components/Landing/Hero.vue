@@ -34,12 +34,12 @@ const handleSearch = () => {
             Verified Local Experts Worldwide
           </div>
 
-          <!-- Main Heading -->
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
+          <!-- Main Heading (Plus Jakarta Sans) -->
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
             Explore cities like a local, <span class="text-emerald-600 underline decoration-amber-400 decoration-wavy decoration-2">not a tourist.</span>
           </h1>
 
-          <!-- Description -->
+          <!-- Description (Inter) -->
           <p class="text-base sm:text-lg text-zinc-600 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
             Connect with local guides to discover hidden spots, authentic food, and custom tours built around your itinerary.
           </p>
@@ -131,7 +131,8 @@ const handleSearch = () => {
               <!-- Destination Footer Overlay -->
               <div class="absolute bottom-4 left-4 right-4 text-white">
                 <p class="text-xs uppercase tracking-widest text-amber-400 font-bold">Featured Destination</p>
-                <h3 class="text-xl font-bold">Ha Long Bay, Vietnam</h3>
+                <!-- Title (Plus Jakarta Sans) -->
+                <h3 class="font-heading text-xl font-bold">Ha Long Bay, Vietnam</h3>
                 <div class="flex items-center gap-1.5 mt-1 text-xs text-stone-200">
                   <span class="text-amber-400 font-bold">★ 4.98</span>
                   <span>•</span>

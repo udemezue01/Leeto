@@ -106,27 +106,27 @@ const handleAddReview = () => {
 
 <template>
   <section class="relative bg-stone-50 py-12 lg:py-20 overflow-hidden font-sans border-b border-zinc-200/60 min-h-screen text-zinc-900">
-    <!-- Ambient Background Glows -->
     <div class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
       
-      <!-- Top Title & Badge Header -->
       <div class="space-y-4 text-left">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/70 text-amber-900 text-xs font-bold uppercase tracking-wider">
           <span class="flex h-2 w-2 rounded-full bg-amber-500"></span>
           Verified Local Tour
         </div>
 
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.15]">
+        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.15]">
           {{ tour.title }}
         </h1>
 
         <div class="flex flex-wrap items-center gap-4 text-sm font-medium text-zinc-600">
           <div class="flex items-center gap-1 text-amber-500 font-bold">
-            <span>★</span>
-            <span class="text-zinc-900">{{ tour.rating }}</span>
+            <svg class="w-4 h-4 fill-amber-400 text-amber-400 shrink-0" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="font-heading text-zinc-900">{{ tour.rating }}</span>
             <span class="text-zinc-500 font-normal">({{ tour.reviewCount }} reviews)</span>
           </div>
           <span>•</span>
@@ -139,7 +139,6 @@ const handleAddReview = () => {
         </div>
       </div>
 
-      <!-- Interactive Gallery -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
         <div class="lg:col-span-8 relative h-72 sm:h-96 lg:h-[480px] rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-200/80 shadow-md">
           <img :src="tour.images[activeImage]" :alt="tour.title" class="w-full h-full object-cover transition-all duration-300" />
@@ -157,36 +156,32 @@ const handleAddReview = () => {
         </div>
       </div>
 
-      <!-- Main Content Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
         
-        <!-- Left Column -->
         <div class="lg:col-span-7 space-y-12">
           
-          <!-- Key Stats Bar -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 bg-white rounded-2xl border border-zinc-200/80 shadow-sm">
             <div>
               <p class="text-xs text-zinc-400 font-medium">Duration</p>
-              <p class="text-sm font-bold text-zinc-900 mt-0.5">{{ tour.duration }}</p>
+              <p class="font-heading text-sm font-bold text-zinc-900 mt-0.5">{{ tour.duration }}</p>
             </div>
             <div>
               <p class="text-xs text-zinc-400 font-medium">Group Size</p>
-              <p class="text-sm font-bold text-zinc-900 mt-0.5">{{ tour.groupSize }}</p>
+              <p class="font-heading text-sm font-bold text-zinc-900 mt-0.5">{{ tour.groupSize }}</p>
             </div>
             <div>
               <p class="text-xs text-zinc-400 font-medium">Languages</p>
-              <p class="text-sm font-bold text-zinc-900 mt-0.5">{{ tour.languages.join(', ') }}</p>
+              <p class="font-heading text-sm font-bold text-zinc-900 mt-0.5">{{ tour.languages.join(', ') }}</p>
             </div>
             <div>
               <p class="text-xs text-zinc-400 font-medium">Flexibility</p>
-              <p class="text-sm font-bold text-emerald-600 mt-0.5">Free Cancel</p>
+              <p class="font-heading text-sm font-bold text-emerald-600 mt-0.5">Free Cancel</p>
             </div>
           </div>
 
-          <!-- Guide Video Introduction Showcase -->
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <h2 class="text-2xl font-bold text-zinc-900">Meet Your Guide in Video</h2>
+              <h2 class="font-heading text-2xl font-bold text-zinc-900">Meet Your Guide in Video</h2>
               <span class="text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-200/70 px-2.5 py-1 rounded-full flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 Video Intro
@@ -221,7 +216,7 @@ const handleAddReview = () => {
                   <div class="flex items-center gap-3">
                     <img :src="tour.guide.avatar" class="w-10 h-10 rounded-full border-2 border-white/80 object-cover" />
                     <div>
-                      <p class="text-sm font-bold text-white leading-tight">Watch {{ tour.guide.name }}'s Welcome Video</p>
+                      <p class="font-heading text-sm font-bold text-white leading-tight">Watch {{ tour.guide.name }}'s Welcome Video</p>
                       <p class="text-xs text-stone-300 font-medium">1 min intro to this tour</p>
                     </div>
                   </div>
@@ -230,25 +225,31 @@ const handleAddReview = () => {
             </div>
           </div>
 
-          <!-- Guide Profile & DM Button -->
           <div class="bg-white p-6 rounded-3xl border border-zinc-200/80 shadow-md space-y-5">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div class="flex items-center gap-4">
                 <div class="relative">
                   <img :src="tour.guide.avatar" :alt="tour.guide.name" class="w-16 h-16 rounded-2xl object-cover" />
-                  <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center text-[10px] text-white font-bold">✓</span>
+                  <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center">
+                    <svg class="w-3 h-3 text-white stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  </span>
                 </div>
                 <div>
                   <div class="flex items-center gap-2">
-                    <h3 class="text-lg font-bold text-zinc-900">{{ tour.guide.name }}</h3>
+                    <h3 class="font-heading text-lg font-bold text-zinc-900">{{ tour.guide.name }}</h3>
                     <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-md">Host</span>
                   </div>
                   <p class="text-xs text-zinc-500 font-medium">{{ tour.guide.title }}</p>
-                  <p class="text-xs text-amber-500 font-bold mt-1">★ {{ tour.guide.rating }} <span class="text-zinc-400 font-normal">({{ tour.guide.tripsLed }} tours led)</span></p>
+                  <p class="text-xs text-amber-500 font-bold mt-1 flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5 fill-amber-400 text-amber-400 shrink-0" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <span>{{ tour.guide.rating }}</span> 
+                    <span class="text-zinc-400 font-normal">({{ tour.guide.tripsLed }} tours led)</span>
+                  </p>
                 </div>
               </div>
 
-              <!-- Send DM Button -->
               <button 
                 @click="showDmModal = true"
                 class="px-5 py-2.5 bg-stone-100 hover:bg-zinc-900 hover:text-white text-zinc-900 font-bold text-xs rounded-xl border border-zinc-200/80 transition-all flex items-center justify-center gap-2 shrink-0 shadow-sm"
@@ -263,20 +264,20 @@ const handleAddReview = () => {
             <p class="text-sm text-zinc-600 leading-relaxed font-medium">{{ tour.guide.bio }}</p>
           </div>
 
-          <!-- Experience Highlights -->
           <div class="space-y-4">
-            <h2 class="text-2xl font-bold text-zinc-900">Experience Highlights</h2>
+            <h2 class="font-heading text-2xl font-bold text-zinc-900">Experience Highlights</h2>
             <ul class="grid grid-cols-1 gap-3">
               <li v-for="(item, index) in tour.highlights" :key="index" class="flex items-start gap-3 text-sm text-zinc-600 font-medium leading-relaxed">
-                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5 text-emerald-700 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                </span>
                 <span>{{ item }}</span>
               </li>
             </ul>
           </div>
 
-          <!-- Itinerary Timeline -->
           <div class="space-y-6">
-            <h2 class="text-2xl font-bold text-zinc-900">Tour Schedule</h2>
+            <h2 class="font-heading text-2xl font-bold text-zinc-900">Tour Schedule</h2>
             <div class="space-y-6 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-zinc-200">
               <div v-for="(step, idx) in tour.itinerary" :key="idx" class="relative flex items-start gap-6">
                 <div class="w-7 h-7 rounded-full bg-zinc-900 border-4 border-stone-50 text-white font-bold text-xs flex items-center justify-center shrink-0 z-10">
@@ -284,22 +285,25 @@ const handleAddReview = () => {
                 </div>
                 <div class="bg-white p-4 rounded-2xl border border-zinc-200/70 flex-1 shadow-sm">
                   <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">{{ step.time }}</span>
-                  <h4 class="text-base font-bold text-zinc-900 mt-0.5">{{ step.title }}</h4>
+                  <h4 class="font-heading text-base font-bold text-zinc-900 mt-0.5">{{ step.title }}</h4>
                   <p class="text-sm text-zinc-600 mt-1 leading-relaxed font-medium">{{ step.desc }}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Reviews Section & Leave Review Button -->
           <div class="space-y-6 pt-4">
             <div class="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <h2 class="text-2xl font-bold text-zinc-900">Guest Reviews</h2>
-                <span class="text-amber-500 font-bold text-sm">★ {{ tour.rating }} / 5 rating</span>
+                <h2 class="font-heading text-2xl font-bold text-zinc-900">Guest Reviews</h2>
+                <span class="font-heading text-amber-500 font-bold text-sm inline-flex items-center gap-1">
+                  <svg class="w-4 h-4 fill-amber-400 text-amber-400 shrink-0" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                  <span>{{ tour.rating }} / 5 rating</span>
+                </span>
               </div>
 
-              <!-- Leave a Review Button -->
               <button 
                 @click="showReviewModal = true"
                 class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-md transition-all flex items-center gap-2"
@@ -317,12 +321,14 @@ const handleAddReview = () => {
                   <div class="flex items-center gap-3">
                     <img :src="rev.avatar" :alt="rev.author" class="w-10 h-10 rounded-full object-cover" />
                     <div>
-                      <h4 class="text-sm font-bold text-zinc-900">{{ rev.author }}</h4>
+                      <h4 class="font-heading text-sm font-bold text-zinc-900">{{ rev.author }}</h4>
                       <p class="text-xs text-zinc-400 font-medium">{{ rev.date }}</p>
                     </div>
                   </div>
-                  <div class="text-amber-400 font-bold text-xs">
-                    {{ '★'.repeat(rev.rating) }}
+                  <div class="flex items-center gap-0.5">
+                    <svg v-for="n in rev.rating" :key="n" class="w-3.5 h-3.5 fill-amber-400 text-amber-400" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
                   </div>
                 </div>
                 <p class="text-sm text-zinc-600 leading-relaxed font-medium">"{{ rev.comment }}"</p>
@@ -332,13 +338,12 @@ const handleAddReview = () => {
 
         </div>
 
-        <!-- Right Column: Sticky Booking Widget -->
         <div class="lg:col-span-5 relative lg:sticky lg:top-8">
           <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-xl shadow-zinc-200/60 border border-zinc-200/80 space-y-6">
             
             <div class="flex items-baseline justify-between border-b border-zinc-100 pb-5">
               <div>
-                <span class="text-3xl font-black text-zinc-900">${{ tour.pricePerPerson }}</span>
+                <span class="font-heading text-3xl font-black text-zinc-900">${{ tour.pricePerPerson }}</span>
                 <span class="text-zinc-500 text-sm font-medium"> / person</span>
               </div>
               <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full">Best Price Guaranteed</span>
@@ -376,7 +381,7 @@ const handleAddReview = () => {
               </div>
               <div class="border-t border-zinc-100 pt-3 flex justify-between text-base font-bold text-zinc-900">
                 <span>Total</span>
-                <span>${{ tour.pricePerPerson * guestCount }}</span>
+                <span class="font-heading font-black text-lg">${{ tour.pricePerPerson * guestCount }}</span>
               </div>
             </div>
 
@@ -391,7 +396,11 @@ const handleAddReview = () => {
             </button>
 
             <div class="flex items-center gap-3 pt-2 text-xs text-zinc-500 font-medium">
-              <div class="w-8 h-8 rounded-lg bg-stone-100 text-zinc-700 flex items-center justify-center font-bold shrink-0">🛡️</div>
+              <div class="w-8 h-8 rounded-lg bg-stone-100 text-zinc-700 flex items-center justify-center font-bold shrink-0">
+                <svg class="w-4 h-4 text-zinc-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751A11.959 11.959 0 0112 2.714z" />
+                </svg>
+              </div>
               <p>Reserve now & pay later. No upfront charges for instant reservation.</p>
             </div>
 
@@ -402,18 +411,21 @@ const handleAddReview = () => {
 
     </div>
 
-    <!-- Modal: Send DM to Tour Guide -->
     <div v-if="showDmModal" class="fixed inset-0 bg-zinc-950/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div class="bg-white p-6 sm:p-8 rounded-3xl max-w-lg w-full border border-zinc-200 shadow-2xl space-y-5 relative">
         <div class="flex items-center justify-between border-b border-zinc-100 pb-4">
           <div class="flex items-center gap-3">
             <img :src="tour.guide.avatar" class="w-10 h-10 rounded-xl object-cover" />
             <div>
-              <h3 class="text-base font-bold text-zinc-900">Message {{ tour.guide.name }}</h3>
+              <h3 class="font-heading text-base font-bold text-zinc-900">Message {{ tour.guide.name }}</h3>
               <p class="text-xs text-zinc-500 font-medium">Typically responds within 1 hour</p>
             </div>
           </div>
-          <button @click="showDmModal = false" class="text-zinc-400 hover:text-zinc-900 font-bold text-lg">✕</button>
+          <button @click="showDmModal = false" class="p-1 rounded-lg hover:bg-stone-100 transition-colors">
+            <svg class="w-5 h-5 text-zinc-400 hover:text-zinc-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
         <div class="space-y-2">
@@ -433,12 +445,15 @@ const handleAddReview = () => {
       </div>
     </div>
 
-    <!-- Modal: Leave a Review -->
     <div v-if="showReviewModal" class="fixed inset-0 bg-zinc-950/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div class="bg-white p-6 sm:p-8 rounded-3xl max-w-lg w-full border border-zinc-200 shadow-2xl space-y-5 relative">
         <div class="flex items-center justify-between border-b border-zinc-100 pb-4">
-          <h3 class="text-lg font-bold text-zinc-900">Write a Tour Review</h3>
-          <button @click="showReviewModal = false" class="text-zinc-400 hover:text-zinc-900 font-bold text-lg">✕</button>
+          <h3 class="font-heading text-lg font-bold text-zinc-900">Write a Tour Review</h3>
+          <button @click="showReviewModal = false" class="p-1 rounded-lg hover:bg-stone-100 transition-colors">
+            <svg class="w-5 h-5 text-zinc-400 hover:text-zinc-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
         <div class="space-y-4">

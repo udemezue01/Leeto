@@ -97,21 +97,19 @@ const scroll = (direction) => {
   <section class="bg-stone-50 py-16 sm:py-24 text-zinc-800 font-sans border-t border-zinc-200/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header with Title & Navigation Controls -->
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
         <div>
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/80 border border-emerald-200/60 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
             <span>🌏</span> Top Rated in Asia
           </div>
-          <h2 class="text-3xl sm:text-4xl font-black text-zinc-900 tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-heading font-black text-zinc-900 tracking-tight">
             Unforgettable Asian Adventures
           </h2>
-          <p class="mt-2 text-sm sm:text-base text-zinc-600 max-w-xl">
+          <p class="mt-2 text-sm sm:text-base font-sans text-zinc-600 max-w-xl">
             Book top-rated local hosts for private street food walks, sacred temple visits, and secret spots.
           </p>
         </div>
 
-        <!-- Desktop & Mobile Controls -->
         <div class="flex items-center gap-2 self-end sm:self-auto">
           <button 
             @click="scroll('left')"
@@ -129,14 +127,13 @@ const scroll = (direction) => {
             class="p-3 rounded-full bg-white border border-zinc-200/80 text-zinc-700 hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all duration-200 shadow-sm active:scale-95 cursor-pointer"
             aria-label="Scroll right"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>
           </button>
         </div>
       </div>
 
-      <!-- Carousel Container -->
       <div 
         ref="carouselRef"
         class="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none scroll-smooth pb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
@@ -147,7 +144,6 @@ const scroll = (direction) => {
           :key="tour.id"
           class="snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[360px] bg-white rounded-2xl border border-zinc-200/80 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-zinc-900/5 hover:border-emerald-500/50 transition-all duration-300 flex flex-col group"
         >
-          <!-- Image Wrapper -->
           <div class="relative h-52 w-full overflow-hidden bg-zinc-100">
             <img 
               :src="tour.image" 
@@ -156,24 +152,20 @@ const scroll = (direction) => {
               loading="lazy"
             />
             
-            <!-- Category Badge -->
-            <span class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-full">
+            <span class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur-md text-white text-[11px] font-sans font-semibold px-2.5 py-1 rounded-full">
               {{ tour.category }}
             </span>
 
-            <!-- Rating Badge -->
-            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1 text-xs font-bold text-zinc-900 shadow-sm">
+            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1 text-xs font-sans font-bold text-zinc-900 shadow-sm">
               <span class="text-amber-500">★</span>
               <span>{{ tour.rating }}</span>
               <span class="text-zinc-400 font-normal">({{ tour.reviewsCount }})</span>
             </div>
           </div>
 
-          <!-- Content Body -->
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
-              <!-- Location & Duration -->
-              <div class="flex items-center justify-between text-xs text-zinc-500 font-semibold mb-2">
+              <div class="flex items-center justify-between text-xs font-sans text-zinc-500 font-semibold mb-2">
                 <span class="flex items-center gap-1 text-emerald-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -184,15 +176,12 @@ const scroll = (direction) => {
                 <span>⏱️ {{ tour.duration }}</span>
               </div>
 
-              <!-- Title -->
-              <h3 class="text-base font-bold text-zinc-900 line-clamp-2 leading-snug group-hover:text-emerald-600 transition-colors">
+              <h3 class="text-base font-heading font-bold text-zinc-900 line-clamp-2 leading-snug group-hover:text-emerald-600 transition-colors">
                 {{ tour.title }}
               </h3>
             </div>
 
-            <!-- Card Footer: Host & Price -->
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
-              <!-- Guide Info -->
               <div class="flex items-center gap-2.5">
                 <div class="relative">
                   <img 
@@ -202,16 +191,15 @@ const scroll = (direction) => {
                   />
                   <span v-if="tour.guide.verified" class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-600 rounded-full border-2 border-white flex items-center justify-center text-[7px] text-white">✓</span>
                 </div>
-                <div class="text-xs">
-                  <p class="font-bold text-zinc-900 leading-none">{{ tour.guide.name }}</p>
+                <div class="text-xs font-sans">
+                  <p class="font-heading font-bold text-zinc-900 leading-none">{{ tour.guide.name }}</p>
                   <p class="text-[10px] text-zinc-400 font-medium">Local Host</p>
                 </div>
               </div>
 
-              <!-- Price Tag -->
               <div class="text-right">
-                <p class="text-[10px] uppercase tracking-wider font-bold text-zinc-400">From</p>
-                <p class="text-base font-black text-zinc-900">${{ tour.price }} <span class="text-xs font-normal text-zinc-500">/ person</span></p>
+                <p class="text-[10px] uppercase tracking-wider font-sans font-bold text-zinc-400">From</p>
+                <p class="text-base font-heading font-black text-zinc-900">${{ tour.price }} <span class="text-xs font-sans font-normal text-zinc-500">/ person</span></p>
               </div>
             </div>
 

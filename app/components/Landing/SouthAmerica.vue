@@ -103,10 +103,10 @@ const scroll = (direction) => {
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/80 border border-emerald-200/60 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
             <span>🌎</span> Top Rated in South America
           </div>
-          <h2 class="text-3xl sm:text-4xl font-black text-zinc-900 tracking-tight">
+          <h2 class="font-heading text-3xl sm:text-4xl font-black text-zinc-900 tracking-tight">
             Unforgettable South American Journeys
           </h2>
-          <p class="mt-2 text-sm sm:text-base text-zinc-600 max-w-xl">
+          <p class="mt-2 text-sm sm:text-base text-zinc-600 max-w-xl font-sans">
             Book trusted local guides for Andean treks, vibrant street food crawls, and authentic cultural encounters.
           </p>
         </div>
@@ -157,12 +157,12 @@ const scroll = (direction) => {
             />
             
             <!-- Category Badge -->
-            <span class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-full">
+            <span class="absolute top-3 left-3 bg-zinc-900/80 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-full font-sans">
               {{ tour.category }}
             </span>
 
             <!-- Rating Badge -->
-            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1 text-xs font-bold text-zinc-900 shadow-sm">
+            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1 text-xs font-bold text-zinc-900 shadow-sm font-sans">
               <span class="text-amber-500">★</span>
               <span>{{ tour.rating }}</span>
               <span class="text-zinc-400 font-normal">({{ tour.reviewsCount }})</span>
@@ -173,7 +173,7 @@ const scroll = (direction) => {
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
               <!-- Location & Duration -->
-              <div class="flex items-center justify-between text-xs text-zinc-500 font-semibold mb-2">
+              <div class="flex items-center justify-between text-xs text-zinc-500 font-semibold mb-2 font-sans">
                 <span class="flex items-center gap-1 text-emerald-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -185,13 +185,13 @@ const scroll = (direction) => {
               </div>
 
               <!-- Title -->
-              <h3 class="text-base font-bold text-zinc-900 line-clamp-2 leading-snug group-hover:text-emerald-600 transition-colors">
+              <h3 class="font-heading text-base font-bold text-zinc-900 line-clamp-2 leading-snug group-hover:text-emerald-600 transition-colors">
                 {{ tour.title }}
               </h3>
             </div>
 
             <!-- Card Footer: Host & Price -->
-            <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
+            <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between font-sans">
               <!-- Guide Info -->
               <div class="flex items-center gap-2.5">
                 <div class="relative">
@@ -211,7 +211,7 @@ const scroll = (direction) => {
               <!-- Price Tag -->
               <div class="text-right">
                 <p class="text-[10px] uppercase tracking-wider font-bold text-zinc-400">From</p>
-                <p class="text-base font-black text-zinc-900">${{ tour.price }} <span class="text-xs font-normal text-zinc-500">/ person</span></p>
+                <p class="font-heading text-base font-black text-zinc-900">${{ tour.price }} <span class="font-sans text-xs font-normal text-zinc-500">/ person</span></p>
               </div>
             </div>
 
@@ -224,7 +224,6 @@ const scroll = (direction) => {
 </template>
 
 <style scoped>
-/* Utility to hide horizontal scrollbars while keeping swipe scroll functional */
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }

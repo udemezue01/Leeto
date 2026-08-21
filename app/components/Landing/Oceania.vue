@@ -103,7 +103,7 @@ const scroll = (direction) => {
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/80 border border-emerald-200/60 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
             <span>🏝️</span> Top Rated in Oceania
           </div>
-          <h2 class="text-3xl sm:text-4xl font-black text-zinc-900 tracking-tight">
+          <h2 class="font-heading text-3xl sm:text-4xl font-black text-zinc-900 tracking-tight">
             Explore Oceanian Wonders
           </h2>
           <p class="mt-2 text-sm sm:text-base text-zinc-600 max-w-xl">
@@ -164,7 +164,7 @@ const scroll = (direction) => {
             <!-- Rating Badge -->
             <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1 text-xs font-bold text-zinc-900 shadow-sm">
               <span class="text-amber-500">★</span>
-              <span>{{ tour.rating }}</span>
+              <span class="font-heading">{{ tour.rating }}</span>
               <span class="text-zinc-400 font-normal">({{ tour.reviewsCount }})</span>
             </div>
           </div>
@@ -185,7 +185,7 @@ const scroll = (direction) => {
               </div>
 
               <!-- Title -->
-              <h3 class="text-base font-bold text-zinc-900 line-clamp-2 leading-snug group-hover:text-emerald-600 transition-colors">
+              <h3 class="font-heading text-base font-bold text-zinc-900 line-clamp-2 leading-snug group-hover:text-emerald-600 transition-colors">
                 {{ tour.title }}
               </h3>
             </div>
@@ -211,7 +211,7 @@ const scroll = (direction) => {
               <!-- Price Tag -->
               <div class="text-right">
                 <p class="text-[10px] uppercase tracking-wider font-bold text-zinc-400">From</p>
-                <p class="text-base font-black text-zinc-900">${{ tour.price }} <span class="text-xs font-normal text-zinc-500">/ person</span></p>
+                <p class="font-heading text-base font-black text-zinc-900">${{ tour.price }} <span class="font-sans text-xs font-normal text-zinc-500">/ person</span></p>
               </div>
             </div>
 

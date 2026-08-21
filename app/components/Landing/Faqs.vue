@@ -39,20 +39,18 @@ const toggleFaq = (index) => {
   <section class="bg-stone-50 py-16 sm:py-24 text-zinc-800 font-sans border-t border-zinc-200/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
       <div class="text-center mb-12 sm:mb-16">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-200/60 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
-          <span>❓</span> Good to Know
+          Good to Know
         </div>
-        <h2 class="text-3xl sm:text-4xl font-black text-zinc-900 tracking-tight">
+        <h2 class="font-heading text-3xl sm:text-4xl font-black text-zinc-900 tracking-tight">
           Frequently Asked Questions
         </h2>
-        <p class="mt-3 text-sm sm:text-base text-zinc-600 max-w-xl mx-auto">
+        <p class="font-sans mt-3 text-sm sm:text-base text-zinc-600 max-w-xl mx-auto">
           Everything you need to know about booking private tours, custom itineraries, and hosting with Leeto.
         </p>
       </div>
 
-      <!-- FAQ Accordion List -->
       <div class="space-y-4">
         <div 
           v-for="(faq, index) in faqs" 
@@ -65,7 +63,7 @@ const toggleFaq = (index) => {
             class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none cursor-pointer select-none"
             :aria-expanded="openIndex === index"
           >
-            <span class="text-base sm:text-lg font-bold text-zinc-900">
+            <span class="font-heading text-base sm:text-lg font-bold text-zinc-900">
               {{ faq.question }}
             </span>
             
@@ -79,19 +77,17 @@ const toggleFaq = (index) => {
             </span>
           </button>
 
-          <!-- Accordion Body -->
           <div 
             v-show="openIndex === index" 
-            class="px-6 pb-5 text-sm sm:text-base text-zinc-600 leading-relaxed border-t border-zinc-100/80 pt-3"
+            class="font-sans px-6 pb-5 text-sm sm:text-base text-zinc-600 leading-relaxed border-t border-zinc-100/80 pt-3"
           >
             {{ faq.answer }}
           </div>
         </div>
       </div>
 
-      <!-- Footer Help Link -->
       <div class="mt-12 text-center">
-        <p class="text-xs sm:text-sm text-zinc-500">
+        <p class="font-sans text-xs sm:text-sm text-zinc-500">
           Still have questions? 
           <a href="#support" class="font-bold text-emerald-600 hover:text-emerald-700 underline underline-offset-2">
             Contact our 24/7 support team

@@ -25,97 +25,91 @@ const handleGoogleLogin = () => {
 
 <template>
   <section class="relative bg-stone-50 py-12 lg:py-20 overflow-hidden font-sans border-b border-zinc-200/60 min-h-screen flex items-center">
-    <!-- Ambient Background Glows -->
     <div class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
-        <!-- Copy & Value Proposition (Left) -->
         <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
           
-          <!-- Badge -->
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-200/70 text-emerald-900 text-xs font-bold uppercase tracking-wider">
             <span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
             Join the Leeto Community
           </div>
 
-          <!-- Main Heading -->
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
             Start exploring cities with people who <span class="text-emerald-600 underline decoration-amber-400 decoration-wavy decoration-2">live there.</span>
           </h1>
 
-          <!-- Description -->
-          <p class="text-base sm:text-lg text-zinc-600 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+          <p class="font-sans text-base sm:text-lg text-zinc-600 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
             Create an account to book personalized local tours, message verified guides directly, and unlock secret spots off the tourist grid.
           </p>
 
-          <!-- Feature Highlights List -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto lg:mx-0 text-left pt-2">
             <div class="flex items-start gap-3 p-3 rounded-2xl bg-white/60 border border-zinc-200/50 backdrop-blur-sm">
               <div class="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold shrink-0">
-                🗺️
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-amber-900">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503-11.485l-5.5 3.438a1.125 1.125 0 01-1.19 0l-5.58-3.488A1.125 1.125 0 002.25 4.5v12a1.125 1.125 0 00.533.958l5.5 3.438a1.125 1.125 0 001.19 0l5.58-3.488a1.125 1.125 0 01.663-.208h.008a1.125 1.125 0 001.125-1.125V4.5a1.125 1.125 0 00-1.843-.885l-.504.303z" />
+                </svg>
               </div>
               <div>
-                <h4 class="text-xs font-bold text-zinc-900">100% Custom Tours</h4>
-                <p class="text-[11px] text-zinc-500">Tailor itineraries to your schedule</p>
+                <h4 class="font-heading text-xs font-bold text-zinc-900">100% Custom Tours</h4>
+                <p class="font-sans text-[11px] text-zinc-500">Tailor itineraries to your schedule</p>
               </div>
             </div>
 
             <div class="flex items-start gap-3 p-3 rounded-2xl bg-white/60 border border-zinc-200/50 backdrop-blur-sm">
               <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold shrink-0">
-                🔒
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-emerald-900">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751A11.959 11.959 0 0112 2.714z" />
+                </svg>
               </div>
               <div>
-                <h4 class="text-xs font-bold text-zinc-900">Verified Hosts</h4>
-                <p class="text-[11px] text-zinc-500">Identity checked & peer-reviewed</p>
+                <h4 class="font-heading text-xs font-bold text-zinc-900">Verified Hosts</h4>
+                <p class="font-sans text-[11px] text-zinc-500">Identity checked & peer-reviewed</p>
               </div>
             </div>
           </div>
 
-          <!-- Quick Login Redirect -->
-          <p class="text-xs sm:text-sm text-zinc-500 pt-2">
+          <p class="font-sans text-xs sm:text-sm text-zinc-500 pt-2">
             Already have a Leeto account? 
             <a href="#login" class="font-bold text-emerald-600 hover:text-emerald-700 underline underline-offset-2">Log in here</a>
           </p>
 
         </div>
 
-        <!-- Registration Form Card (Right) -->
         <div class="lg:col-span-5 relative">
           <div class="relative bg-white p-6 sm:p-8 rounded-3xl shadow-2xl border border-zinc-200/80">
             
             <div class="mb-6 text-center lg:text-left">
-              <h2 class="text-2xl font-black text-zinc-900 tracking-tight">Create your account</h2>
-              <p class="text-xs text-zinc-500 mt-1 font-medium">Join in seconds to start discovering or guiding</p>
+              <h2 class="font-heading text-2xl font-black text-zinc-900 tracking-tight">Create your account</h2>
+              <p class="font-sans text-xs text-zinc-500 mt-1 font-medium">Join in seconds to start discovering or guiding</p>
             </div>
 
-            <!-- User Type Selector -->
             <div class="grid grid-cols-2 gap-1.5 p-1 bg-stone-100 rounded-xl mb-6 text-xs font-bold">
               <button 
                 type="button"
                 @click="accountType = 'traveler'"
                 :class="accountType === 'traveler' ? 'bg-white text-zinc-900 shadow-sm' : 'text-zinc-500 hover:text-zinc-900'"
-                class="py-2 rounded-lg transition-all text-center cursor-pointer"
+                class="py-2 rounded-lg transition-all text-center cursor-pointer font-sans"
               >
-                🧳 I'm a Traveler
+                I'm a Traveler
               </button>
               <button 
                 type="button"
                 @click="accountType = 'guide'"
                 :class="accountType === 'guide' ? 'bg-white text-zinc-900 shadow-sm' : 'text-zinc-500 hover:text-zinc-900'"
-                class="py-2 rounded-lg transition-all text-center cursor-pointer"
+                class="py-2 rounded-lg transition-all text-center cursor-pointer font-sans"
               >
-                🚩 I'm a Local Guide
+                I'm a Local Guide
               </button>
             </div>
 
-            <!-- Google OAuth Button -->
             <button 
               @click="handleGoogleLogin"
               type="button"
-              class="w-full py-3 px-4 bg-white hover:bg-stone-50 text-zinc-700 font-bold text-sm rounded-xl border border-zinc-200/90 shadow-sm transition-all duration-150 flex items-center justify-center gap-3 active:scale-[0.99] cursor-pointer mb-5"
+              class="w-full py-3 px-4 bg-white hover:bg-stone-50 text-zinc-700 font-bold text-sm rounded-xl border border-zinc-200/90 shadow-sm transition-all duration-150 flex items-center justify-center gap-3 active:scale-[0.99] cursor-pointer mb-5 font-sans"
             >
               <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -126,16 +120,13 @@ const handleGoogleLogin = () => {
               <span>Continue with Google</span>
             </button>
 
-            <!-- Divider -->
             <div class="relative flex items-center justify-center mb-5">
               <div class="border-t border-zinc-200/80 w-full"></div>
-              <span class="bg-white px-3 text-[11px] font-bold uppercase tracking-wider text-zinc-400 absolute">or email</span>
+              <span class="bg-white px-3 text-[11px] font-bold uppercase tracking-wider text-zinc-400 absolute font-sans">or email</span>
             </div>
 
-            <!-- Form -->
-            <form @submit.prevent="handleRegister" class="space-y-4">
+            <form @submit.prevent="handleRegister" class="space-y-4 font-sans">
               
-              <!-- First & Last Name Row -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div class="space-y-1">
                   <label class="text-xs font-bold text-zinc-700">First Name</label>
@@ -164,7 +155,6 @@ const handleGoogleLogin = () => {
                 </div>
               </div>
 
-              <!-- Email Field -->
               <div class="space-y-1">
                 <label class="text-xs font-bold text-zinc-700">Email Address</label>
                 <div class="relative flex items-center px-3 py-2 bg-stone-50 rounded-xl border border-zinc-200/70 focus-within:border-emerald-600 focus-within:ring-1 focus-within:ring-emerald-600 transition-all">
@@ -181,7 +171,6 @@ const handleGoogleLogin = () => {
                 </div>
               </div>
 
-              <!-- Password Field -->
               <div class="space-y-1">
                 <label class="text-xs font-bold text-zinc-700">Password</label>
                 <div class="relative flex items-center px-3 py-2 bg-stone-50 rounded-xl border border-zinc-200/70 focus-within:border-emerald-600 focus-within:ring-1 focus-within:ring-emerald-600 transition-all">
@@ -205,10 +194,9 @@ const handleGoogleLogin = () => {
                 </div>
               </div>
 
-              <!-- Submit Button -->
               <button 
                 type="submit" 
-                class="w-full py-3.5 px-6 bg-zinc-900 hover:bg-emerald-600 text-white font-bold text-sm rounded-xl shadow-md hover:shadow-emerald-600/20 transition-all duration-200 flex items-center justify-center gap-2 shrink-0 group cursor-pointer active:scale-[0.99] mt-2"
+                class="w-full py-3.5 px-6 bg-zinc-900 hover:bg-emerald-600 text-white font-bold text-sm rounded-xl shadow-md hover:shadow-emerald-600/20 transition-all duration-200 flex items-center justify-center gap-2 shrink-0 group cursor-pointer active:scale-[0.99] mt-2 font-sans"
               >
                 <span>Create Account</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform">
@@ -216,7 +204,6 @@ const handleGoogleLogin = () => {
                 </svg>
               </button>
 
-              <!-- Terms Disclaimer -->
               <p class="text-[10px] text-zinc-400 text-center leading-relaxed pt-1">
                 By creating an account, you agree to Leeto’s 
                 <a href="#terms" class="underline font-semibold hover:text-zinc-600">Terms of Service</a> and 

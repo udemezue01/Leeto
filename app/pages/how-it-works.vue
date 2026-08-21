@@ -68,33 +68,30 @@ const payoutFeatures = [
 
 <template>
   <section class="relative bg-stone-50 py-12 lg:py-20 overflow-hidden font-sans border-b border-zinc-200/60">
-    <!-- Ambient Background Glows -->
     <div class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16 lg:space-y-24">
       
-      <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto space-y-6">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/70 text-amber-900 text-xs font-bold uppercase tracking-wider">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/70 text-amber-900 text-xs font-bold uppercase tracking-wider font-sans">
           <span class="flex h-2 w-2 rounded-full bg-amber-500"></span>
           Simple, Transparent & Secure
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
           How Leeto works for <span class="text-emerald-600 underline decoration-amber-400 decoration-wavy decoration-2">everyone.</span>
         </h1>
 
-        <p class="text-base sm:text-lg text-zinc-600 font-medium leading-relaxed">
+        <p class="font-sans text-base sm:text-lg text-zinc-600 font-medium leading-relaxed">
           Whether you want to explore hidden corners of the world or share your passion for your hometown, Leeto makes connecting seamless and rewarding.
         </p>
 
-        <!-- Role Selector Toggle -->
         <div class="inline-flex p-1.5 bg-stone-200/70 rounded-2xl border border-zinc-200/80 shadow-inner">
           <button
             @click="activeRole = 'travelers'"
             :class="[
-              'px-6 py-2.5 rounded-xl font-bold text-sm transition-all duration-200',
+              'px-6 py-2.5 rounded-xl font-sans font-bold text-sm transition-all duration-200',
               activeRole === 'travelers' 
                 ? 'bg-white text-zinc-900 shadow-md' 
                 : 'text-zinc-600 hover:text-zinc-900'
@@ -105,7 +102,7 @@ const payoutFeatures = [
           <button
             @click="activeRole = 'guides'"
             :class="[
-              'px-6 py-2.5 rounded-xl font-bold text-sm transition-all duration-200',
+              'px-6 py-2.5 rounded-xl font-sans font-bold text-sm transition-all duration-200',
               activeRole === 'guides' 
                 ? 'bg-white text-zinc-900 shadow-md' 
                 : 'text-zinc-600 hover:text-zinc-900'
@@ -116,7 +113,6 @@ const payoutFeatures = [
         </div>
       </div>
 
-      <!-- Step-by-step Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div 
           v-for="step in (activeRole === 'travelers' ? travelerSteps : guideSteps)" 
@@ -125,7 +121,7 @@ const payoutFeatures = [
         >
           <div>
             <div class="flex items-center justify-between mb-6">
-              <span class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg">
+              <span class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-heading font-black text-lg">
                 {{ step.step }}
               </span>
               <div class="w-10 h-10 rounded-xl bg-stone-50 border border-zinc-200/70 flex items-center justify-center text-zinc-500 group-hover:text-emerald-600 group-hover:border-emerald-600 transition-colors">
@@ -135,24 +131,23 @@ const payoutFeatures = [
               </div>
             </div>
 
-            <h3 class="text-xl font-bold text-zinc-900 mb-2">{{ step.title }}</h3>
-            <p class="text-sm text-zinc-600 font-medium leading-relaxed">{{ step.description }}</p>
+            <h3 class="font-heading text-xl font-bold text-zinc-900 mb-2">{{ step.title }}</h3>
+            <p class="font-sans text-sm text-zinc-600 font-medium leading-relaxed">{{ step.description }}</p>
           </div>
         </div>
       </div>
 
-      <!-- How Guides Get Paid Section (Visible for Guides or standard context) -->
       <div class="bg-zinc-900 rounded-3xl p-6 sm:p-10 lg:p-12 text-white relative overflow-hidden shadow-2xl border border-zinc-800">
         <div class="absolute top-0 right-0 -mt-10 -mr-10 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
         
         <div class="relative z-10 max-w-3xl mb-10">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-500/30">
-            💳 Seamless Payouts
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-500/30 font-sans">
+            Seamless Payouts
           </div>
-          <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          <h2 class="font-heading text-3xl sm:text-4xl font-black text-white tracking-tight">
             How earnings & payouts work for Guides
           </h2>
-          <p class="text-stone-300 font-medium text-sm sm:text-base mt-3">
+          <p class="font-sans text-stone-300 font-medium text-sm sm:text-base mt-3">
             Focus on creating memorable experiences. We take care of secure booking payments, fraud protection, and fast direct transfers.
           </p>
         </div>
@@ -163,21 +158,20 @@ const payoutFeatures = [
             :key="payout.title" 
             class="bg-zinc-800/80 backdrop-blur-md p-6 rounded-2xl border border-zinc-700/60"
           >
-            <span class="inline-block px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 text-xs font-bold mb-3">
+            <span class="inline-block px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 text-xs font-bold mb-3 font-sans">
               {{ payout.badge }}
             </span>
-            <h4 class="text-lg font-bold text-white mb-2">{{ payout.title }}</h4>
-            <p class="text-xs sm:text-sm text-stone-300 font-medium leading-relaxed">{{ payout.description }}</p>
+            <h4 class="font-heading text-lg font-bold text-white mb-2">{{ payout.title }}</h4>
+            <p class="font-sans text-xs sm:text-sm text-stone-300 font-medium leading-relaxed">{{ payout.description }}</p>
           </div>
         </div>
 
-        <!-- Join CTA -->
         <div class="mt-10 pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
           <div class="text-center sm:text-left">
-            <p class="text-base font-bold text-white">Ready to share your city with global travelers?</p>
-            <p class="text-xs text-stone-400">Join our growing network of verified local guides today.</p>
+            <p class="font-heading text-base font-bold text-white">Ready to share your city with global travelers?</p>
+            <p class="font-sans text-xs text-stone-400">Join our growing network of verified local guides today.</p>
           </div>
-          <button class="w-full sm:w-auto px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl shadow-lg transition-all duration-200 shrink-0">
+          <button class="w-full sm:w-auto px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-sans font-bold text-sm rounded-xl shadow-lg transition-all duration-200 shrink-0">
             Become a Guide Now
           </button>
         </div>

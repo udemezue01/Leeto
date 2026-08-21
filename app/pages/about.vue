@@ -46,48 +46,40 @@ const pillars = [
 <template>
   <section class="relative bg-stone-50 py-12 lg:py-20 overflow-hidden font-sans border-b border-zinc-200/60 min-h-screen">
     
-    <!-- Ambient Background Glows -->
     <div class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16 lg:space-y-24">
 
-      <!-- =============================================================== -->
-      <!-- HERO / STORY HEADER                                             -->
-      <!-- =============================================================== -->
       <div class="text-center max-w-3xl mx-auto space-y-6">
         
-        <!-- Pre-Launch Badge -->
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/70 text-amber-900 text-xs font-bold uppercase tracking-wider">
           <span class="flex h-2 w-2 rounded-full bg-amber-500 animate-pulse"></span>
           Pre-Launch • Currently In Active Development
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
           Turning local knowledge into a <span class="text-emerald-600 underline decoration-amber-400 decoration-wavy decoration-2">global gig economy.</span>
         </h1>
 
-        <p class="text-base sm:text-lg text-zinc-600 font-medium leading-relaxed">
+        <p class="font-sans text-base sm:text-lg text-zinc-600 font-medium leading-relaxed">
           The internet allowed designers, developers, and writers to sell their digital skills globally. Leeto is building the marketplace infrastructure that lets local experts sell their authentic experiences to travelers worldwide.
         </p>
       </div>
 
-      <!-- =============================================================== -->
-      <!-- ORIGIN STORY & THE PROBLEM WE ARE SOLVING                       -->
-      <!-- =============================================================== -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-8 sm:p-12 rounded-3xl border border-zinc-200/80 shadow-xl shadow-zinc-200/50">
         
         <div class="lg:col-span-7 space-y-5">
           <div class="inline-block px-3 py-1 rounded-lg bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider">
             Our Story & Origin
           </div>
-          <h2 class="text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight">
+          <h2 class="font-heading text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight">
             Why does local tourism still feel fragmented?
           </h2>
-          <p class="text-sm sm:text-base text-zinc-600 font-medium leading-relaxed">
+          <p class="font-sans text-sm sm:text-base text-zinc-600 font-medium leading-relaxed">
             Around the world, millions of passionate locals hold incredible knowledge about their cities—their food, history, hidden alleys, and culture. Yet, becoming an independent tour guide has historically required a massive social following, expensive agency middleman fees, or built-in connections.
           </p>
-          <p class="text-sm sm:text-base text-zinc-600 font-medium leading-relaxed">
+          <p class="font-sans text-sm sm:text-base text-zinc-600 font-medium leading-relaxed">
             On the other side, travelers struggle to find verified, authentic local guides they can trust. We realized that local tourism is one of the last major skill sectors waiting for a modern, decentralized marketplace.
           </p>
           <div class="p-4 bg-stone-50 rounded-2xl border border-zinc-200/70 text-xs sm:text-sm text-zinc-700 font-semibold italic">
@@ -96,32 +88,29 @@ const pillars = [
         </div>
 
         <div class="lg:col-span-5 bg-zinc-900 text-white p-6 sm:p-8 rounded-2xl border border-zinc-800 space-y-6">
-          <h3 class="text-lg font-bold text-amber-400 uppercase tracking-wider text-xs">The Vision Blueprint</h3>
-          <div class="space-y-4 text-xs sm:text-sm text-stone-300">
+          <h3 class="font-heading text-lg font-bold text-amber-400 uppercase tracking-wider text-xs">The Vision Blueprint</h3>
+          <div class="space-y-4 text-xs sm:text-sm text-stone-300 font-sans">
             <div class="flex items-start gap-3">
               <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
-              <p><strong class="text-white">Fiverr for Tourism:</strong> Sign up, pass verification, list your experience, set your price, and start receiving direct bookings.</p>
+              <p><strong class="text-white font-bold">Fiverr for Tourism:</strong> Sign up, pass verification, list your experience, set your price, and start receiving direct bookings.</p>
             </div>
             <div class="flex items-start gap-3">
               <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
-              <p><strong class="text-white">Upwork for Travel:</strong> Travelers post custom itineraries (e.g., <em>"3 days in Lagos for food & nightlife"</em>), and verified local guides submit custom proposals.</p>
+              <p><strong class="text-white font-bold">Upwork for Travel:</strong> Travelers post custom itineraries (e.g., <em>"3 days in Lagos for food & nightlife"</em>), and verified local guides submit custom proposals.</p>
             </div>
             <div class="flex items-start gap-3">
               <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
-              <p><strong class="text-white">Guide Storefronts:</strong> Every local expert gets an independent profile with ratings, reviews, tour options, and direct payouts.</p>
+              <p><strong class="text-white font-bold">Guide Storefronts:</strong> Every local expert gets an independent profile with ratings, reviews, tour options, and direct payouts.</p>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- =============================================================== -->
-      <!-- CORE PILLARS GRID                                              -->
-      <!-- =============================================================== -->
       <div class="space-y-8">
         <div class="text-center max-w-2xl mx-auto">
-          <h2 class="text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight">The Core Problems We Are Solving</h2>
-          <p class="text-sm text-zinc-600 font-medium mt-2">Re-engineering how travelers and local guides interact with modern platform safety.</p>
+          <h2 class="font-heading text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight">The Core Problems We Are Solving</h2>
+          <p class="font-sans text-sm text-zinc-600 font-medium mt-2">Re-engineering how travelers and local guides interact with modern platform safety.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -136,24 +125,21 @@ const pillars = [
                   <path stroke-linecap="round" stroke-linejoin="round" :d="pillar.icon" />
                 </svg>
               </div>
-              <h3 class="text-lg font-bold text-zinc-900 mb-2">{{ pillar.title }}</h3>
-              <p class="text-xs sm:text-sm text-zinc-600 font-medium leading-relaxed">{{ pillar.description }}</p>
+              <h3 class="font-heading text-lg font-bold text-zinc-900 mb-2">{{ pillar.title }}</h3>
+              <p class="font-sans text-xs sm:text-sm text-zinc-600 font-medium leading-relaxed">{{ pillar.description }}</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- =============================================================== -->
-      <!-- MARKETPLACE FLYWHEEL                                            -->
-      <!-- =============================================================== -->
       <div class="bg-stone-100 p-8 sm:p-12 rounded-3xl border border-zinc-200/80 text-center space-y-8">
         <div class="max-w-xl mx-auto space-y-2">
           <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Growth Mechanics</span>
-          <h2 class="text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight">The Marketplace Flywheel</h2>
-          <p class="text-xs sm:text-sm text-zinc-600 font-medium">As more verified guides list authentic tours, traveler choice expands, generating trust, reviews, and organic marketplace momentum.</p>
+          <h2 class="font-heading text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight">The Marketplace Flywheel</h2>
+          <p class="font-sans text-xs sm:text-sm text-zinc-600 font-medium">As more verified guides list authentic tours, traveler choice expands, generating trust, reviews, and organic marketplace momentum.</p>
         </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm font-bold text-zinc-800">
+        <div class="flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm font-bold text-zinc-800 font-sans">
           <span class="px-4 py-2.5 bg-white rounded-xl shadow-sm border border-zinc-200/70">1. More Local Guides</span>
           <span class="text-emerald-600 font-black">→</span>
           <span class="px-4 py-2.5 bg-white rounded-xl shadow-sm border border-zinc-200/70">2. Diverse Local Tours</span>
@@ -164,14 +150,11 @@ const pillars = [
         </div>
       </div>
 
-      <!-- =============================================================== -->
-      <!-- GOTO MARKET ROADMAP                                             -->
-      <!-- =============================================================== -->
       <div class="space-y-8">
         <div class="text-center max-w-2xl mx-auto">
           <span class="text-xs font-bold text-amber-900 uppercase tracking-wider bg-amber-100 px-3 py-1 rounded-full">Phased Rollout</span>
-          <h2 class="text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight mt-3">Our Expansion Strategy</h2>
-          <p class="text-sm text-zinc-600 font-medium mt-1">We are starting local, proving the marketplace model, and scaling globally.</p>
+          <h2 class="font-heading text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight mt-3">Our Expansion Strategy</h2>
+          <p class="font-sans text-sm text-zinc-600 font-medium mt-1">We are starting local, proving the marketplace model, and scaling globally.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -181,40 +164,37 @@ const pillars = [
             class="bg-white p-6 rounded-2xl border border-zinc-200/80 shadow-md relative overflow-hidden"
           >
             <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-black text-zinc-400 uppercase tracking-widest">{{ item.phase }}</span>
+              <span class="text-xs font-black text-zinc-400 uppercase tracking-widest font-heading">{{ item.phase }}</span>
               <span 
                 :class="[
-                  'px-2.5 py-0.5 text-[10px] font-bold rounded-full uppercase tracking-wider',
+                  'px-2.5 py-0.5 text-[10px] font-bold rounded-full uppercase tracking-wider font-sans',
                   item.status === 'In Progress' ? 'bg-emerald-100 text-emerald-800 border border-emerald-200' : 'bg-stone-100 text-zinc-500'
                 ]"
               >
                 {{ item.status }}
               </span>
             </div>
-            <h3 class="text-lg font-bold text-zinc-900 mb-2">{{ item.region }}</h3>
-            <p class="text-xs sm:text-sm text-zinc-600 font-medium leading-relaxed">{{ item.description }}</p>
+            <h3 class="font-heading text-lg font-bold text-zinc-900 mb-2">{{ item.region }}</h3>
+            <p class="font-sans text-xs sm:text-sm text-zinc-600 font-medium leading-relaxed">{{ item.description }}</p>
           </div>
         </div>
       </div>
 
-      <!-- =============================================================== -->
-      <!-- PRE-LAUNCH CTA & INVESTOR / EARLY ACCESS BLOCK                   -->
-      <!-- =============================================================== -->
       <div class="bg-zinc-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl border border-zinc-800">
         <div class="absolute top-0 right-0 -mt-10 -mr-10 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="relative z-10 max-w-3xl space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/30">
-            🚀 Join the Journey
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/30 font-sans">
+            Join the Journey
           </div>
-          <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          <h2 class="font-heading text-3xl sm:text-4xl font-black text-white tracking-tight">
             Help us make tourism a global gig economy.
           </h2>
-          <p class="text-stone-300 font-medium text-sm sm:text-base leading-relaxed">
+          <p class="font-sans text-stone-300 font-medium text-sm sm:text-base leading-relaxed">
             Leeto is currently in active MVP development. Whether you are an early local guide wanting to pioneer our platform, a traveler interested in early access, or an investor aligned with our vision, we would love to connect.
           </p>
 
-          <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+          <div class="pt-4 flex flex-col sm:flex-row items-center gap-4 font-sans">
             <a 
               href="mailto:johnzeus14@gmail.com" 
               class="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl transition-all duration-200 text-center shadow-lg shadow-emerald-900/40"
