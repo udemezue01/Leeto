@@ -83,26 +83,21 @@ const filteredFaqs = computed(() => {
 <template>
   <section class="relative bg-stone-50 py-12 lg:py-20 overflow-hidden font-sans border-b border-zinc-200/60 min-h-screen">
     
-    <!-- Ambient Background Glows -->
     <div class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
 
-      <!-- =============================================================== -->
-      <!-- HERO SEARCH BANNER                                              -->
-      <!-- =============================================================== -->
       <div class="text-center max-w-3xl mx-auto space-y-6">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/70 text-amber-900 text-xs font-bold uppercase tracking-wider">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/70 text-amber-900 text-xs font-bold uppercase tracking-wider font-sans">
           <span class="flex h-2 w-2 rounded-full bg-amber-500"></span>
           24/7 Global Support Center
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.12]">
           How can we <span class="text-emerald-600 underline decoration-amber-400 decoration-wavy decoration-2">help you?</span>
         </h1>
 
-        <!-- Search Bar -->
         <div class="bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl shadow-xl shadow-zinc-200/60 border border-zinc-200/80 max-w-2xl mx-auto">
           <div class="relative flex items-center px-3 py-2.5 bg-stone-50 rounded-xl border border-zinc-200/70 focus-within:border-emerald-600 focus-within:ring-1 focus-within:ring-emerald-600 transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-600 shrink-0 mr-2.5">
@@ -112,15 +107,12 @@ const filteredFaqs = computed(() => {
               v-model="searchQuery"
               type="text" 
               placeholder="Search for answers e.g. cancellations, payouts, verification..." 
-              class="w-full bg-transparent text-zinc-900 placeholder-zinc-400 text-sm font-semibold focus:outline-none"
+              class="w-full bg-transparent text-zinc-900 placeholder-zinc-400 text-sm font-semibold focus:outline-none font-sans"
             />
           </div>
         </div>
       </div>
 
-      <!-- =============================================================== -->
-      <!-- TOP HELP CATEGORIES                                             -->
-      <!-- =============================================================== -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div 
           v-for="category in categories" 
@@ -133,10 +125,10 @@ const filteredFaqs = computed(() => {
                 <path stroke-linecap="round" stroke-linejoin="round" :d="category.icon" />
               </svg>
             </div>
-            <h3 class="text-lg font-bold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors">{{ category.title }}</h3>
-            <p class="text-xs text-zinc-500 font-medium leading-relaxed">{{ category.description }}</p>
+            <h3 class="font-heading text-lg font-bold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors">{{ category.title }}</h3>
+            <p class="text-xs text-zinc-500 font-medium leading-relaxed font-sans">{{ category.description }}</p>
           </div>
-          <div class="mt-6 flex items-center gap-1.5 text-xs font-bold text-emerald-600">
+          <div class="mt-6 flex items-center gap-1.5 text-xs font-bold text-emerald-600 font-sans">
             <span>Browse Topics</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -145,19 +137,15 @@ const filteredFaqs = computed(() => {
         </div>
       </div>
 
-      <!-- =============================================================== -->
-      <!-- FREQUENTLY ASKED QUESTIONS SECTION                             -->
-      <!-- =============================================================== -->
       <div class="bg-white rounded-3xl border border-zinc-200/80 p-6 sm:p-10 shadow-xl shadow-zinc-200/50 space-y-8">
         
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-100 pb-6">
           <div>
-            <h2 class="text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight">Frequently Asked Questions</h2>
-            <p class="text-xs sm:text-sm text-zinc-500 font-medium mt-1">Quick answers to common questions from our community.</p>
+            <h2 class="font-heading text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight">Frequently Asked Questions</h2>
+            <p class="text-xs sm:text-sm text-zinc-500 font-medium mt-1 font-sans">Quick answers to common questions from our community.</p>
           </div>
 
-          <!-- FAQ Filter Tabs -->
-          <div class="inline-flex p-1 bg-stone-100 rounded-xl border border-zinc-200/70 self-start sm:self-auto">
+          <div class="inline-flex p-1 bg-stone-100 rounded-xl border border-zinc-200/70 self-start sm:self-auto font-sans">
             <button 
               @click="activeTab = 'all'"
               :class="['px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all', activeTab === 'all' ? 'bg-white text-zinc-900 shadow-sm' : 'text-zinc-500 hover:text-zinc-900']"
@@ -179,8 +167,7 @@ const filteredFaqs = computed(() => {
           </div>
         </div>
 
-        <!-- FAQ Accordion List -->
-        <div class="space-y-4">
+        <div class="space-y-4 font-sans">
           <div 
             v-for="(faq, index) in filteredFaqs" 
             :key="index"
@@ -222,26 +209,23 @@ const filteredFaqs = computed(() => {
 
       </div>
 
-      <!-- =============================================================== -->
-      <!-- STILL NEED HELP / CONTACT CTA                                   -->
-      <!-- =============================================================== -->
       <div class="bg-zinc-900 rounded-3xl p-6 sm:p-10 lg:p-12 text-white relative overflow-hidden shadow-2xl border border-zinc-800">
         <div class="absolute top-0 right-0 -mt-10 -mr-10 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
           <div class="lg:col-span-8 space-y-4 text-center lg:text-left">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/30">
-              💬 Direct Assistance
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/30 font-sans">
+              Direct Assistance
             </div>
-            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            <h2 class="font-heading text-3xl sm:text-4xl font-black text-white tracking-tight">
               Still have questions? We're here for you.
             </h2>
-            <p class="text-stone-300 font-medium text-sm sm:text-base max-w-xl">
+            <p class="text-stone-300 font-medium text-sm sm:text-base max-w-xl font-sans">
               Our support team is active around the clock to help with active tour emergencies, booking adjustments, and account verification.
             </p>
           </div>
 
-          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center font-sans">
             <button class="w-full py-3.5 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl shadow-lg transition-all duration-200 flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a.75.75 0 01-.81-.54 5.96 5.96 0 011.207-3.056C4.41 15.82 3 14.02 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
